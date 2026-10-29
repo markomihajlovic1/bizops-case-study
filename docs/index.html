@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brightline recap work · Marko</title>
+  <style>
+    :root {
+      --ink: #1c1917;
+      --muted: #57534e;
+      --line: #e7e5e4;
+      --bg: #fafaf9;
+      --card: #fff;
+      --accent: #b45309;
+      --accent-soft: #fed7aa;
+      --dash: #a8a29e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    main { max-width: 40rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    header { border-bottom: 1px solid var(--line); padding-bottom: 1.25rem; margin-bottom: 1.5rem; }
+    .meta { color: var(--muted); font-size: 0.875rem; letter-spacing: 0.01em; }
+    h1 { font-size: 1.5rem; font-weight: 650; letter-spacing: -0.02em; margin: 0.35rem 0 0.25rem; }
+    h2 { font-size: 0.75rem; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin: 2rem 0 0.75rem; }
+    h3 { font-size: 1.05rem; font-weight: 650; margin: 0 0 0.5rem; }
+    p, li { color: var(--ink); }
+    .muted { color: var(--muted); }
+    .tldr { margin: 0; padding-left: 1.1rem; }
+    .tldr li { margin-bottom: 0.4rem; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 1rem 1.1rem 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+    .card ul { margin: 0.4rem 0 0.75rem; padding-left: 1.1rem; }
+    .card li { margin-bottom: 0.35rem; }
+    .links { display: flex; flex-wrap: wrap; gap: 0.35rem 0.85rem; font-size: 0.875rem; }
+    a { color: var(--accent); text-underline-offset: 2px; }
+    a:hover { color: var(--ink); }
+    .chart { margin: 0.75rem 0 0; }
+    .row { display: grid; grid-template-columns: 4.2rem 1fr 3.2rem; gap: 0.5rem; align-items: center; margin-bottom: 0.55rem; font-size: 0.875rem; }
+    .row .name { color: var(--muted); }
+    .row .pct { text-align: right; font-variant-numeric: tabular-nums; }
+    .track {
+      position: relative;
+      height: 0.7rem;
+      background: var(--line);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .track .mark {
+      position: absolute;
+      left: 80%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--ink);
+      opacity: 0.35;
+    }
+    .bar { height: 100%; background: var(--accent); border-radius: 99px; }
+    .bar.ghost { background: var(--dash); opacity: 0.7; }
+    .east { display: flex; flex-direction: column; gap: 3px; }
+    .east .track { height: 0.45rem; }
+    .caption { font-size: 0.8rem; color: var(--muted); margin: 0.4rem 0 0; }
+    footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: 0.875rem; color: var(--muted); }
+    footer p { margin: 0.3rem 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="meta">Marko · Biz Ops seat · Ironside case study v1.2</p>
+      <h1>Brightline recap work, 21–24 Sep</h1>
+      <p class="meta">About 1 hour of my time, about 2 hours of AI time. Skipped: none.</p>
+    </header>
+
+    <h2>In short</h2>
+    <ol class="tldr">
+      <li>Two Kettle &amp; Crumb calls are now recaps in the brain. Dana is VP Growth; Jess Park owns samples. The sample cap covers 75 boxes a month against about 70 fall-flavor creators.</li>
+      <li>Share of calls with a recap in an hour: North 90%, East 70% (dashboard 75%), South 35%, West 10%. Work South first. Expect about 65% there by Friday 2 Oct if account managers post in Slack.</li>
+      <li>Last week’s Loop recap posted a private message to the client’s Slack and still counted as on time. The skill rewrite fixed that on a fresh rerun. The remaining gaps need pipeline changes, not wording.</li>
+    </ol>
+
+    <h2>Block A · Do the work</h2>
+    <article class="card">
+      <h3>Kettle &amp; Crumb is in the brain, pages are proposed not edited</h3>
+      <ul>
+        <li>22 Sep weekly and 24 Sep monthly review recapped with owners, due dates, and nothing said after Dana left.</li>
+        <li>Dana is VP Growth; Jess Park takes samples, inventory and shipping. Sheet GMV is $140,000 (21 Sep); the call said $210,000, unverified, so the sheet is unchanged unless the owner confirms it is TikTok Shop only.</li>
+        <li>Before talking to Dana: 32 of 60 affiliates, 28 more in about 5 weeks. Biggest risks are who still approves creators, and the 75-box cap vs about 70 fall-flavor samples.</li>
+      </ul>
+      <p class="links">
+        <a href="https://github.com/markomihajlovic1/bizops-case-study/blob/main/brain/knowledge/meetings/2026-09-22-kettle-and-crumb.md">22 Sep recap</a>
+        <a href="https://github.com/markomihajlovic1/bizops-case-study/blob/main/brain/knowledge/meetings/2026-09-24-kettle-and-crumb.md">24 Sep recap</a>
+        <a href="https://github.com/markomihajlovic1/bizops-case-study/blob/main/proposed-changes.md">proposed-changes.md</a>
+        <a href="https://github.com/markomihajlovic1/bizops-case-study/blob/main/answer.md">answer.md</a>
+      </p>
+    </article>
+
+    <h2>Block B · Move the number</h2>
+    <article class="card">
+      <h3>South first: the agent posts, nobody in the pod does</h3>
+      <ul>
+        <li>The number is recaps posted within 60 minutes ÷ calls held. East’s dashboard (75%) divided by recorded calls; the real figure is 21/30 = 70%.</li>
+        <li>The agent alone cannot hit 80%: 29 of 59 agent recaps (49%) within an hour, median 65 min. All 45 account-manager recaps were on time. South is 18 short of 80%, records 90% of calls, and has zero account-manager posts. West’s gap is capture (26 of 30 calls on WhatsApp).</li>
+        <li>Week of 28 Sep–2 Oct with Marcus: post the summary he already writes in Slack, not email. Do not count emailed summaries. Expect 6–7 of 10 calls, about 65%.</li>
+      </ul>
+      <div class="chart" aria-label="Share of calls with a recap within an hour">
+        <div class="row">
+          <span class="name">North</span>
+          <div class="track"><span class="mark" title="80% target"></span><div class="bar" style="width:90%"></div></div>
+          <span class="pct">90%</span>
+        </div>
+        <div class="row">
+          <span class="name">East</span>
+          <div class="east">
+            <div class="track"><span class="mark"></span><div class="bar" style="width:70%"></div></div>
+            <div class="track"><span class="mark"></span><div class="bar ghost" style="width:75%"></div></div>
+          </div>
+          <span class="pct">70%</span>
+        </div>
+        <div class="row">
+          <span class="name">South</span>
+          <div class="track"><span class="mark"></span><div class="bar" style="width:35%"></div></div>
+          <span class="pct">35%</span>
+        </div>
+        <div class="row">
+          <span class="name">West</span>
+          <div class="track"><span class="mark"></span><div class="bar" style="width:10%"></div></div>
+          <span class="pct">10%</span>
+        </div>
+        <p class="caption">Solid bar = share of calls held. East’s grey bar is the dashboard (75%). Mark is the 80% target.</p>
+      </div>
+      <p class="links" style="margin-top:0.9rem">
+        <a href="https://github.com/markomihajlovic1/bizops-case-study/blob/main/metrics.md">metrics.md</a>
+        <a href="https://github.com/markomihajlovic1/bizops-case-study/blob/main/metrics-raw.md">metrics-raw.md</a>
+        <a href="https://github.com/markomihajlovic1/bizops-case-study/blob/main/plan.md">plan.md</a>
+      </p>
+    </article>
+
+    <h2>Block C · Train the agent</h2>
+    <article class="card">
+      <h3>The leak was a skill problem. Latency and silent failures are not</h3>
+      <ul>
+        <li>The 15 Sep Loop recap put a pasted DM (CEO, fees, a Q1 review) into Theo’s own Slack channel, retyped $95K GMV against the sheet’s $62K, and had no owners or due dates. That is c084: posted in 55 min, counted as on time.</li>
+        <li>Skill rewrite, then a fresh session that saw only the skill, the brain and the transcript. After recap: DM gone, GMV flagged not copied, Lena owns the October brief due 18 Sep. Checker: 10 FAIL before, PASS after.</li>
+        <li>A skill cannot cut the recording, speed the agent up, retry c117 and c140, or capture WhatsApp. Those are in the engineering ticket.</li>
+      </ul>
+      <p class="links">
+        <a href="https://github.com/markomihajlovic1/bizops-case-study/blob/main/c1-issues.md">c1-issues.md</a>
+        <a href="https://github.com/markomihajlovic1/bizops-case-study/blob/main/workers/skills/skill-recap.md">skill-recap.md</a>
+        <a href="https://github.com/markomihajlovic1/bizops-case-study/blob/main/c2-before-after.md">c2-before-after.md</a>
+        <a href="https://github.com/markomihajlovic1/bizops-case-study/blob/main/fde-ticket.md">fde-ticket.md</a>
+      </p>
+    </article>
+
+    <h2>Extra</h2>
+    <article class="card">
+      <h3>recap_check.py</h3>
+      <p>Last week’s Loop recap posted a pasted DM to Theo’s own Slack channel and still counted as on time. I would run this on every recap before it posts, because reading them by hand does not catch that.</p>
+      <p class="links">
+        <a href="https://github.com/markomihajlovic1/bizops-case-study/blob/main/extra/README.md">extra/README.md</a>
+        <a href="https://github.com/markomihajlovic1/bizops-case-study/blob/main/extra/recap_check.py">extra/recap_check.py</a>
+      </p>
+    </article>
+
+    <h2>What I would automate next</h2>
+    <article class="card">
+      <p>Put <code>recap_check</code> inside the recap agent as a gate, so nothing that fails SANITIZER or retypes a number can reach a client channel.</p>
+      <p>Send the recap draft to the account manager in Slack within 15 minutes for one-tap approve-and-post, because humans posting is the only thing that clears 80% today.</p>
+      <p>Generate <code>proposed-changes</code> from every recap into a pod-lead approval queue, so people and account pages stop going stale.</p>
+    </article>
+
+    <footer>
+      <p><a href="https://github.com/markomihajlovic1/bizops-case-study">Working folder</a> · <a href="https://github.com/markomihajlovic1/bizops-case-study/blob/main/log.md">log.md</a></p>
+      <p>All names, brands and numbers are fictional. Brightline / Ironside Biz Ops case study v1.2.</p>
+    </footer>
+  </main>
+</body>
+</html>
