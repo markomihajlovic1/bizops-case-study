@@ -1,0 +1,4 @@
+**Does:** lints any `.md` against RESOLVER and SANITIZER: recap template, one named owner plus an ISO due date, banned phrases, phone numbers, broken links. Typed GMV, ad spend, active affiliates and retention FAIL only on files under `brain/`. Outside `brain/`, fenced code and backtick links are skipped so a proposal can quote a recap.
+**Run:** `python extra/recap_check.py brain/knowledge/meetings/`, or any `.md` file or folder. Python 3, nothing else. Exit 1 on FAIL, so it can sit in a pipeline.
+**Why:** last week's Loop recap posted a pasted DM to Theo's own Slack channel and still counted as on time. I would run this on every recap before it posts, because reading them by hand does not catch that.
+**Next:** gate the recap agent on a FAIL before it posts, and compare a stated GMV with `accounts-sheet.csv` instead of only flagging typed numbers.
