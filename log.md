@@ -7,9 +7,8 @@
 I'm completing the attached case study. Build me an execution plan for it.
 
 Constraints:
-- Time budget: [e.g. 3 hours total, hard cap 4]
-- My tools: [e.g. Claude Code, ChatGPT, Python]
-- Deliverable: [e.g. one shareable artifact + a repo with all working files]
+- Time budget: 1-4hrs
+- Deliverable: one shareable artifact + a repo with all working files
 
 The plan must include:
 1. Order of work with a time estimate per question, and which questions to do first and why
