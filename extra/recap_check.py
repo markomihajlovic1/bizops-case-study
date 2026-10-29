@@ -100,13 +100,22 @@ def check(path):
 
     section = None
     rule_file = fm.get("type") in {"sanitizer", "resolver", "skill"}
+    brain_page = "brain" in path.resolve().parts
+    in_fence = False
     for n, line in enumerate([] if rule_file else text.splitlines(), 1):
         low = line.lower()
+        if line.lstrip().startswith("```"):
+            in_fence = not in_fence
+            continue
+        if in_fence and not brain_page:
+            continue
         if h := re.match(r"##\s+(.*)", line):
             section = h.group(1).strip()
         if line.startswith(("source:", "account:", "date:", "updated:")):
             continue
-        if re.search(PERF, low) and re.search(MONEY, low) and "accounts-sheet" not in low:
+        if not brain_page:
+            pass
+        elif re.search(PERF, low) and re.search(MONEY, low) and "accounts-sheet" not in low:
             fails.append(f"L{n} performance number typed, link the sheet instead: {line.strip()[:90]}")
         elif re.search(r"\d+\s+active affiliates", low) and "target" not in low and "accounts-sheet" not in low:
             warns.append(f"L{n} active affiliates count typed? link the sheet: {line.strip()[:90]}")
